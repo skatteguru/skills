@@ -1,0 +1,4 @@
+# skatteguru_csv=1
+Date,Type,Symbol,Asset Type,Quantity,Price,Price Currency,Total,Total Currency,Fee,Fee Currency,Account,Account Type,Description
+2025-01-10,Buy,BTC,Crypto,0.1,100000,SEK,10000,SEK,100,SEK,Example exchange,AF,Fiat purchase
+2025-06-15,Sell,BTC,Crypto,0.04,150000,SEK,6000,SEK,60,SEK,Example exchange,AF,Fiat sale

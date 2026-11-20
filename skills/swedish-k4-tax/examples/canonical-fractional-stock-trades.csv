@@ -1,0 +1,4 @@
+# skatteguru_csv=1
+Date,Type,Symbol,Asset Type,Quantity,Price,Price Currency,Total,Total Currency,Fee,Fee Currency,Account,Account Type,Description
+2025-02-03,Buy,FRACT,ETF,2.5,80,SEK,200,SEK,2.5,SEK,Example broker,AF,Fractional purchase
+2025-08-20,Sell,FRACT,ETF,1,100,SEK,100,SEK,1,SEK,Example broker,AF,Partial sale

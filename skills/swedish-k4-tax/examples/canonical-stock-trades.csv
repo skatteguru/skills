@@ -1,0 +1,4 @@
+# skatteguru_csv=1
+Date,Type,Symbol,Asset Type,Quantity,Price,Price Currency,Total,Total Currency,Fee,Fee Currency,Account,Account Type,Description
+2025-01-10,Buy,ACME,Equity,10,100,SEK,1000,SEK,10,SEK,Example broker,AF,Opening purchase
+2025-06-15,Sell,ACME,Equity,4,150,SEK,600,SEK,4,SEK,Example broker,AF,Partial sale

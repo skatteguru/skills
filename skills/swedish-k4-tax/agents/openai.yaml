@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swedish investment tax (K4)"
+  short_description: "Swedish investment tax help, with or without an account"
+  default_prompt: "Use $swedish-k4-tax to help with my investment declaration, choose account-free or connected help, and ask before filing with Skatteverket."

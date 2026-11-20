@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+.venv/
+dist/
+*.zip
+# User data and temporary authentication material belong outside the repository.
+workspace/
+request.txt
+*.har
+.env
+.env.*
+
+.ruff_cache/
+.mypy_cache/
+
+# Local development notes
+/TODO.md
