@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from build_skill_zip import build  # noqa: E402
+from check_skill_install import verify_installation  # noqa: E402
 from validate_package import SKILL_NAME, ValidationError, validate  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
@@ -114,6 +115,22 @@ class PackageTests(unittest.TestCase):
         ui.write_text(ui.read_text() + "\npolicy:\n  allow_implicit_invocation: false\n")
         with self.assertRaises(ValidationError):
             validate(self.root)
+
+    def test_installed_copy_runs_and_rejects_missing_or_changed_files(self) -> None:
+        installed = self.root / "project/.agents/skills" / SKILL_NAME
+        shutil.copytree(self.skill, installed)
+        verify_installation(self.package, installed)
+        for name in ("references/brokers/etrade.md", "scripts/etrade_common.py"):
+            path = installed / name
+            content = path.read_bytes()
+            path.unlink()
+            with self.subTest(missing=name), self.assertRaises(ValidationError):
+                verify_installation(self.package, installed)
+            path.write_bytes(content + b"\nchanged")
+            with self.subTest(changed=name), self.assertRaises(ValidationError):
+                verify_installation(self.package, installed)
+            path.write_bytes(content)
+        verify_installation(self.package, installed)
 
     def test_version_requires_matching_release_notes(self) -> None:
         path = self.skill / "SKILL.md"

@@ -29,6 +29,28 @@ use the [acceptance scenarios](acceptance-scenarios.md) for behavioral verificat
 Development dependencies are pinned. The bundled broker downloaders themselves
 still use only the Python standard library.
 
+## Verify skills CLI installation
+
+With Node.js 22.20+ and Git available:
+
+```sh
+python -B scripts/check_skill_install.py
+```
+
+This separate integration check downloads the pinned `skills@1.9.0` installer from
+npm and installs the current checkout into a temporary project for Codex. It uses
+an explicit skill/agent, non-interactive confirmation and copy mode. No global
+skills installation is changed. Using the checkout rather than GitHub's default
+branch makes the test cover the actual commit under review, including pull requests.
+
+The check requires exactly one installed skill, compares every installed file with
+its source, validates installed reference links and runs both downloader entry
+points with `--help` from the installed copy. Missing references, a missing shared
+Python module or changed file contents fail the check. Unit tests cover rejection
+of incomplete/modified installs without requiring network access. The integration
+check needs npm access to fetch the installer; it never authenticates with a broker
+or sends tax data.
+
 ## Build the installable ZIP
 
 ```sh
@@ -57,7 +79,7 @@ running from an extracted ZIP. No build or test contacts a broker or files a ret
    skill version; published release tags should remain tied to their original source.
 4. The [workflow](../.github/workflows/checks.yml) checks Python 3.10 and 3.14,
    rebuilds the tagged source and publishes the ZIP/checksum with its release notes
-   only after all checks pass.
+   only after both Python checks and the skills CLI installation check pass.
 5. Check the published assets and verify the downloaded ZIP against `SHA256SUMS`.
 
 Checks also run on pull requests, pushes to main and manual workflow runs. These
