@@ -10,13 +10,27 @@ features are useful.
 
 ## Install
 
+For supported coding agents, run this from your project (Node.js 22.20+):
+
+```sh
+npx skills add skatteguru/skills --skill swedish-k4-tax
+```
+
+Choose your agent if prompted. This installs the complete skill, including its
+references, examples and bundled Python scripts. Project installation was verified
+with `skills` 1.9.0 and Codex: all 26 files matched the source, and both downloader
+entry points ran successfully with `--help`. This checks installation, not a live
+tax workflow.
+
+For the ChatGPT app or manual installation:
+
 **[Download the skill ZIP](https://github.com/skatteguru/skills/releases/latest/download/swedish-k4-tax.zip)**
 from the [latest release](https://github.com/skatteguru/skills/releases/latest).
 A `SHA256SUMS` file is available alongside it.
 
 - **ChatGPT app:** where skill installation is available, import the release ZIP
   using the app's skill controls. Use this ZIP, not GitHub's source-code archive.
-- **Local agents:** extract the complete `swedish-k4-tax/` folder into your agent's
+- **Manual alternative for local agents:** extract the complete `swedish-k4-tax/` folder into your agent's
   documented skills directory. For Codex this can be `~/.agents/skills/`; for Claude
   Code, `~/.claude/skills/`. Preserve any local edits before replacing files.
 
