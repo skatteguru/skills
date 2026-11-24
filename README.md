@@ -98,7 +98,9 @@ Guarantee. No stock-plan tax-document exception has been established. User-perfo
 downloads remain available; automated browser access and authenticated helpers
 require applicable broker authorization. See the [E*TRADE policy summary](skills/swedish-k4-tax/references/brokers/etrade.md).
 
-Ordinary downloads, including IBKR CSV exports, **do not require full CDP access**.
+The IBKR guide covers Activity Flex XML collection and MCP upload where XML
+import is deployed, with Activity Statement CSV as a fallback. Ordinary browser
+exports **do not require full CDP access**.
 Automatic authenticated request capture for the E*TRADE scripts does, but that
 setting is requested only after policy checks and selection of a permitted route.
 See [collection choices and browser guidance](skills/swedish-k4-tax/references/browser.md).

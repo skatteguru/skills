@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2
+
+- Document IBKR Activity Flex XML collection with browser handoff for sign-in,
+  report template selection and a minimal export profile.
+- Describe original-file upload and parser verification through Skatteguru MCP,
+  including the Activity Statement CSV fallback when XML availability is unconfirmed.
+
 ## 0.1.1
 
 - Offer manual downloads, built-in browsing or computer use where supported,

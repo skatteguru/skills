@@ -9,7 +9,7 @@ or bundled helper does not establish broker authorization.
 | Broker | Reference | Collection status |
 | --- | --- | --- |
 | E*TRADE / Morgan Stanley stock plans | [E*TRADE](etrade.md) | Manual route; automated routes require applicable written authorization; bundled helpers tested offline |
-| Interactive Brokers | [IBKR](ibkr.md) | Detailed browser route; Activity Statement CSV |
+| Interactive Brokers | [IBKR](ibkr.md) | Browser collection and MCP import for Activity Flex XML where deployed; Activity Statement CSV fallback |
 | Avanza | [Avanza](avanza.md) | Guide-based stub |
 | Nordnet | [Nordnet](nordnet.md) | Guide-based stub |
 | Charles Schwab | [Schwab](schwab.md) | Guide-based stub |

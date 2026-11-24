@@ -22,8 +22,9 @@ do not silently replace it with browser upload.
    stable UUID for the file. Use `application/pdf`, `text/csv`, `application/json`
    or the appropriate spreadsheet MIME type according to the live schema.
 2. Call `prepare_document_upload` with the required identity, name, type, size
-   and checksum. Inspect tool errors and per-file errors. Batch preparation is
-   planned; use it only if actually exposed. Prepare small chunks ready to transfer.
+   and checksum. For supported Activity Flex XML, use `application/xml` and
+   send the original XML bytes. Inspect tool errors and per-file errors. Use
+   batch preparation only when exposed and prepare small chunks ready to transfer.
 3. For `async_upload`, send the same bytes immediately using the returned method
    and every required header. The host performs this transfer; MCP prepares it.
    Do not attach broker cookies or Skatteguru OAuth credentials to storage URLs.
@@ -70,6 +71,8 @@ account identity, acquisition history, transfers, corporate actions, duplicates
 and negative holdings. A processed trade file with zero events is not a successful
 financial import. E*TRADE orders or supported IBKR supplemental lot evidence can
 correctly produce zero stock events: verify reconciliation counts and contents.
+A cash-only IBKR Activity report can also have zero stock events. Verify the
+parsed cash postings and supported source coverage before counting it as imported.
 
 If the broker evidence disagrees with parsed events, retain the original and
 identify the exact discrepancy. Do not silently repair originals or delete a

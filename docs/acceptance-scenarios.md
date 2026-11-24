@@ -42,7 +42,9 @@ requires approval for the exact taxpayer, year, artifacts and action.
 | Chronology/timezone | Preserve raw times and source zone; DST tested; no invented seconds for linked events |
 | IBKR populated Activity CSV | Correct accounts/periods, accepted and excluded records, currency/fees and history coverage |
 | IBKR empty trade report | Valid cash-only result; no claim of verified populated trade support |
-| Unsupported Flex/XML | Capability limitation reported; supported primary export retained |
+| IBKR Activity Flex browser route | After policy and scope checks, hand off sign-in and verification. Run the correct Activity query, verify both dates and save one account’s original XML. Ordinary browser controls are sufficient. |
+| IBKR Activity Flex import | Verify deployed XML support and the source file. Transfer original bytes through the MCP prepared-upload route, then compare security and cash outcomes with the report. |
+| IBKR Flex unavailable | Explain the missing capability, leave any downloaded XML intact and offer Activity Statement CSV for the same scope. |
 | Interrupted download/import | Resume from checkpoint; originals unchanged; no duplicate financial postings |
 | Queued checksum duplicate | Inspect actual transfer/processing state; never call an abandoned reservation uploaded |
 | Rate/quota/expiry errors | Bound retries, honor access limits, reconcile state before recovery |

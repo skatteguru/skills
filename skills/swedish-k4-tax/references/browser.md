@@ -94,9 +94,9 @@ access**, then approve the relevant site. Refresh the browser connection or tool
 documentation after they change it, and verify again. An organization may disable
 the setting. CDP means Chrome DevTools Protocol, sometimes called “CDT” by users.
 
-IBKR Activity Statement CSV and ordinary exports from other brokers do not require
-full CDP. Use normal browser controls for these routes and do not request the CDP
-setting. Continue independently useful work while waiting for E*TRADE request-capture
+Ordinary browser exports, including IBKR Activity Statements and Activity Flex
+reports, work with normal browser controls and do not require full CDP.
+Continue independently useful work while waiting for E*TRADE request-capture
 access. If CDP remains unavailable, offer user-performed downloads or another
 permitted method the user chooses. A user-created request capture and a helper
 using it are still subject to broker policy; they are not workarounds for denied
