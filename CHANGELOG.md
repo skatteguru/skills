@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.1
+
+- Offer manual downloads, built-in browsing or computer use where supported,
+  with separate consent for broker collection and uploads.
+- Check broker policies and applicable robots.txt rules before automated access;
+  distinguish user consent from broker authorization and respect access restrictions.
+- Document E*TRADE's written-authorization requirement and guarantee exclusion.
+- Update broker routing, progress guidance and acceptance scenarios. New policy-check
+  and collection-choice behaviors await behavioral acceptance testing; no live
+  broker, computer-use collection or filing test was performed for this release.
+
 ## 0.1.0
 
 - One discoverable Swedish investment tax (K4) skill, published by Skatteguru.

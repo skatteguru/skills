@@ -2,7 +2,7 @@
 name: swedish-k4-tax
 description: Help with Swedish investment taxes and K4 declarations, including capital gains, omkostnadsbelopp, broker records, acquisition costs and same-day trades. Use for declaring shares, options, ETFs and supported crypto transactions. Offer account-free guidance or optional Skatteguru imports, SRU exports and PDF audit reports, with approval before filing with Skatteverket.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   publisher: "Skatteguru"
 ---
 
