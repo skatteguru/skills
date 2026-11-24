@@ -2,10 +2,13 @@
 
 Read only the modules for the user's sources. Status describes these instructions,
 not a guarantee of deployed parser coverage or a successful live download.
+For every broker, offer the [collection choice and policy check](../browser.md)
+before automated access. Manual instructions remain available; a documented route
+or bundled helper does not establish broker authorization.
 
 | Broker | Reference | Collection status |
 | --- | --- | --- |
-| E*TRADE / Morgan Stanley stock plans | [E*TRADE](etrade.md) | Detailed route; bundled Python helpers |
+| E*TRADE / Morgan Stanley stock plans | [E*TRADE](etrade.md) | Manual route; automated routes require applicable written authorization; bundled helpers tested offline |
 | Interactive Brokers | [IBKR](ibkr.md) | Detailed browser route; Activity Statement CSV |
 | Avanza | [Avanza](avanza.md) | Guide-based stub |
 | Nordnet | [Nordnet](nordnet.md) | Guide-based stub |

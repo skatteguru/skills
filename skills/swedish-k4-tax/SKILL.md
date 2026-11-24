@@ -43,7 +43,8 @@ than count. Ten is neither a hard limit nor a reason to omit required history.
 
 - No account, selected examples or choosing a route: [account-free help and onboarding](references/account-free.md).
 - User chooses connected features: [setup](references/setup.md).
-- Use a browser or capture broker requests: [browser preflight](references/browser.md).
+- Choose manual downloads, built-in browsing or computer use, and check broker
+  policies before automated access: [browser preflight](references/browser.md).
 - Collect records: [broker routing](references/brokers/index.md), then only the
   relevant broker references. E*TRADE download helpers are bundled under `scripts/`;
   other sources use the documented browser routes.
@@ -53,9 +54,12 @@ than count. Ten is neither a hard limit nor a reason to omit required history.
 
 ## Execution rules
 
-Use the built-in browser for broker collection and Skatteverket where supported;
-prefer Skatteguru MCP for account operations. Discover live schemas and actual
-browser/CDP capabilities before relying on them. Recheck after permission changes.
+For broker collection, honor the user's choice of manual downloads, built-in
+browser or computer use where available. Check broker policies and robots.txt
+before automated access; user consent does not replace required broker permission.
+For Skatteverket, use supported browser controls; prefer Skatteguru MCP for account
+operations. Discover live schemas and actual browser/CDP/computer-use capabilities
+before relying on them. Recheck after permission changes.
 Use `https://rust.skatteguru.se/mcp` only for the connected route; account-free
 help does not require a Skatteguru connection.
 

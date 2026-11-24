@@ -15,10 +15,25 @@ requires approval for the exact taxpayer, year, artifacts and action.
 | Gradual onboarding | Explain relevant benefits/access, preserve completed work and authorize uploads separately |
 | PDF audit report | Use actual report tools; correct year/detail/language, private download and visible source limits |
 | Report sharing | Saving a PDF does not send it; approval required before sharing actual evidence |
-| CDP disabled | Request the setting only for E*TRADE script request capture; IBKR and other ordinary broker downloads proceed without full CDP |
-| Ordinary broker export | Use normal browser controls; do not inspect network traffic or ask users to enable full CDP |
+| Files already available | Process supplied files without broker login, automation consent or a broker-access warning; authorize upload separately |
+| Collection choice | Offer manual, built-in browser and computer use only where supported and permitted; preserve an existing choice |
+| Manual collection chosen | Give document/navigation instructions; user operates the broker site; no assistant inspection of logged-in pages or request capture |
+| Computer use chosen | Explain visible-account exposure, confirm selected browser and collection scope; do not inspect unrelated tabs/apps |
+| No restriction found | Identify official policy sources/check date, disclose that absence of a restriction is not guaranteed permission, confirm collection scope |
+| Terms unclear/unavailable | Disclose uncertainty and offer manual download first; informed automation choice requires resolved robots checks and no known restriction or host constraint |
+| Written authorization required | Explain broker condition and guarantee exclusions; user risk acceptance alone does not authorize access; manual collection remains available |
+| E*TRADE stock-plan PDFs | Apply written-authorization condition to automated collection and helpers; do not infer an exception from read-only tax purpose |
+| Broker authorization supplied | Check agent/account-surface/method scope; API approval does not establish browser permission; robots and host checks still apply |
+| Robots rules | Check each intended origin and relevant agent/path rules, including helper endpoints; respect applicable exclusions without agent spoofing |
+| Robots absent/permissive | Do not treat absent file or Allow rules as broker authorization; continue separate policy and consent checks |
+| Robots fetch unresolved | Distinguish missing file from fetch failure; defer automation and offer manual collection rather than interpreting failure as permission |
+| Route blocked | Stop; no browser switching, computer use, request replay or helper used to bypass the block |
+| Method/scope changes | Reuse consent within unchanged scope; obtain a new choice before request capture or material account/period/method changes; uploads remain separate |
+| Private policy note | Save only source URLs, dates, decision and authorization/consent scope outside package; no private correspondence or credentials |
+| CDP disabled | Only after policy checks and route choice, request the setting for E*TRADE script capture; ordinary broker downloads require no full CDP |
+| Ordinary broker export | After policy checks and user choice, use normal browser controls; do not inspect network traffic or request full CDP |
 | CDP enabled after initial check | Refresh capabilities and site grant; verify access before capture |
-| Organization blocks CDP | Respect denial; offer normal downloads/private local handoff, without claiming access |
+| Organization blocks CDP | Respect denial; offer user-performed downloads or a separately chosen permitted route; private request captures do not bypass restrictions |
 | Wrong endpoint/account | No uploads or writes until the production endpoint and intended account are confirmed |
 | E*TRADE confirmation history | All selected source categories accounted for, actual coverage recorded, earlier acquisitions retained |
 | Invalid PDF/auth response | Reject login/error HTML even on HTTP 200; no successful-document count |
@@ -49,3 +64,5 @@ Record version, host, date, scenario, synthetic/live scope, checks performed and
 actual outcome for each acceptance run. Do not promote a scenario to passed from
 code inspection alone. The README's ChatGPT testing statement refers to earlier
 workflow testing, not completion of this matrix.
+The new policy-check and collection-choice scenarios, including computer use,
+are specifications awaiting behavioral acceptance testing.

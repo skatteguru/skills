@@ -5,9 +5,30 @@ with synthetic offline responses. Live authenticated verification of these versi
 is pending. Python 3.10+ is required; no third-party packages are needed. No MCP
 transfer, automatic resume or journal verification is performed by these scripts.
 
+## Access policy and user choice
+
+The [E*TRADE Security Center](https://us.etrade.com/security-center) AI-agent FAQ
+requires Morgan Stanley's written authorization for AI-agent access to its systems.
+It states that users remain responsible for agent actions even when authorized,
+that access may be restricted or terminated, and that losses resulting from agent
+activity are excluded from the Customer Protection Guarantee. This is a public
+policy summary checked against official indexed text on 2026-11-24; recheck the
+current policy for the proposed route. No stock-plan PDF-download exception was
+established by this review.
+
+Offer user-performed downloads and processing of the resulting files. Built-in
+browsing, computer use and authenticated helpers require the same
+[broker-policy preflight](../browser.md), including applicable written authorization
+and robots checks. Neither read-only tax collection, a user-created request capture
+nor user acceptance of risk establishes an exception. Bundled scripts and offline
+tests establish no broker permission. Do not ask for login or CDP access before
+resolving the policy condition.
+
 ## Collect
 
-Run [browser preflight](../browser.md). User logs in. Establish required historical
+Run [browser preflight](../browser.md) and honor the selected permitted method.
+For manual collection, guide the user through the routes below without accessing
+the account. User logs in and handles verification. Establish required historical
 coverage through December 31 of the income year, including relevant earlier
 acquisitions. Supply the dates explicitly to the helpers.
 
@@ -19,7 +40,8 @@ acquisitions. Supply the dates explicitly to the helpers.
 | Order-history JSON | Reconciliation and execution evidence | `etrade_orders.py`, explicit years or date range |
 | Cash activity | Separate currency-account work when requested | Linked cash-activity guide; not covered by confirmation downloader |
 
-Use the bulk route for large collections when authorized and supported. Capture
+Use the bulk route for large collections only when broker permission, user consent,
+robots checks and host capability support it. Capture
 the required authenticated request through approved CDP/network tools. The
 confirmation helper uses `confirmations.json`; the order helper targets
 `/webapisp/stockplan/ah/orders.json`. Verify its required payload and account

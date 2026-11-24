@@ -79,11 +79,29 @@ for Avanza, Nordnet, Schwab, Montrose, cTrader, Nutmeg and other CSV sources.
 E*TRADE confirmation and order-history downloaders are bundled. They require
 Python 3.10+ and no third-party packages; see the E*TRADE reference for usage.
 
-Use normal browser controls for IBKR and other ordinary broker downloads; they
-**do not require full CDP access**. Automatic authenticated request capture for the
-E*TRADE scripts does: open **Settings → Browser → Developer mode → Enable full CDP
-access**, then approve the broker and have the assistant recheck access. CDP means
-Chrome DevTools Protocol, sometimes called “CDT”. See [browser guidance](skills/swedish-k4-tax/references/browser.md).
+Choose user-performed downloads, the built-in browser or computer use on your usual
+browser, where the host supports the method and broker policy permits it. Manual
+collection means you operate the broker site and the assistant helps with the
+resulting files. Computer use is automation and may expose other visible account
+information. Existing files do not require broker access.
+
+Before automated collection, the assistant checks current public broker policies
+and applicable robots.txt rules, explains restrictions or uncertainty, and confirms
+the method, accounts and period. Your consent does not replace broker permission
+or host access controls. An absent or permissive robots.txt does not establish
+permission. Known exclusions are respected; unresolved robots checks defer that
+automated route. Uploading files to Skatteguru requires separate authorization.
+
+E*TRADE's published AI-agent policy requires Morgan Stanley's written authorization
+and excludes losses resulting from agent activity from its Customer Protection
+Guarantee. No stock-plan tax-document exception has been established. User-performed
+downloads remain available; automated browser access and authenticated helpers
+require applicable broker authorization. See the [E*TRADE policy summary](skills/swedish-k4-tax/references/brokers/etrade.md).
+
+Ordinary downloads, including IBKR CSV exports, **do not require full CDP access**.
+Automatic authenticated request capture for the E*TRADE scripts does, but that
+setting is requested only after policy checks and selection of a permitted route.
+See [collection choices and browser guidance](skills/swedish-k4-tax/references/browser.md).
 
 ## Tested coverage
 
@@ -91,6 +109,9 @@ Broker research/download workflows and Skatteguru MCP imports/review have been
 tested in the ChatGPT app. The bundled scripts have offline tests. Live verification
 of these downloader versions, other hosts and a complete run through signed filing
 remain pending. See the [acceptance scenarios](docs/acceptance-scenarios.md).
+The new policy-check and collection-choice instructions, including computer use,
+have not yet had a behavioral acceptance run. Documentation and offline checks do
+not establish broker permission or live browser capability.
 
 The skill covers supported investment/K4 work, not your entire personal return.
 You approve sending tax information to Skatteverket and handle login, BankID and
