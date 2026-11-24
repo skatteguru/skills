@@ -30,6 +30,28 @@ with order-history investigation and IBKR export verification. No private accoun
 IDs, financial results, screenshots or session captures from those workflows are
 included here. No actual Skatteverket filing was verified for this package.
 
+## Broker automation policy sources
+
+Policy reference date: 2026-11-24. These sources inform collection instructions;
+they do not establish permission for any particular user, account or host.
+
+- [E*TRADE Security Center](https://us.etrade.com/security-center): official indexed
+  AI-agent FAQ text requires written authorization, retains user responsibility
+  even when authorized, and excludes losses resulting from agent activity from
+  the Customer Protection Guarantee. No stock-plan download exception or user-specific
+  authorization was verified. Recheck current terms before automation.
+- User-supplied robots.txt text reviewed on 2026-11-24: the wildcard group excludes
+  `/e/t/stockplan/`, `/e/t/accounts/` and `/app/`, while specific login paths are
+  allowed. Apply rules only to the origin serving the file; login allowances do
+  not override account-path exclusions or establish permission for helper endpoints.
+- [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html): robots group/path matching
+  and retrieval rules; robots rules do not constitute access authorization. The
+  skill's collection policy respects applicable exclusions and defers automation
+  when the robots check cannot be resolved.
+
+No live authenticated broker, computer-use collection or filing test was performed
+for these instruction changes. The acceptance matrix specifies behavior still to verify.
+
 ## Bundled E*TRADE helper provenance
 
 The local scripts were adapted from Skatteguru's public downloader scripts and are

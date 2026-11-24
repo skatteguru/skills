@@ -7,7 +7,9 @@ existence of this guide does not establish support for every asset or section.
 
 ## Preferred collection route
 
-Run [browser preflight](../browser.md) for navigation, login and file downloads.
+Run [browser preflight](../browser.md) for policy checks and the user's choice of
+manual downloads, built-in browsing or computer use. For manual collection, give
+the following instructions without accessing the account.
 This route does not require full CDP; use normal browser controls and do not ask
 the user to enable it. Use Client Portal and let the user handle login/session renewal.
 

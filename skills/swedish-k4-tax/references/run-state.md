@@ -17,6 +17,9 @@ Record only what is needed to continue:
 - The income year, brokers, account references and chosen account-free or connected
   route. Note the Skatteguru connection only when one is used.
 - What history was requested, what was collected and any missing periods.
+- Selected collection method, policy source URLs/check dates, restrictions or
+  unresolved checks, and the scope of user consent and any broker authorization.
+  Summarize authorization scope without copying private correspondence.
 - Files still needing transfer, processing or review, with Skatteguru file IDs
   where available. Keep checksums when computed for upload or export.
 - Unresolved review issues and the next useful action.
@@ -41,6 +44,8 @@ transfer receipt is not proof that the whole declaration was signed.
 1. Read the note and confirm that it belongs to the intended taxpayer, accounts,
    income year and chosen route. For connected work, verify the account and endpoint.
    Do not infer identity from a folder name.
+   Before resuming broker automation, recheck policy changes or unresolved checks
+   using [browser preflight](browser.md); obtain consent again if scope changes.
 2. Check the local files and current Skatteguru document statuses. Use the existing
    file IDs to investigate pending work instead of uploading everything again.
 3. Reconcile uncertain transfers before retrying. Preserve originals and do not
